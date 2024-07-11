@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "認証済みアカウントのリプを消します",
+    "version": "1.0.0",
+    "description": "快適なTwitterライフを",
+    "icons": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+    },
+    "permissions": [
+        "scripting",
+        "activeTab"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://x.com/*"
+            ],
+            "js": [
+                "jquery-3.2.1.min.js",
+                "main.js"
+            ],
+            "run_at": "document_idle"
+        }
+    ]
+}
